@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.adiblarapp.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.adiblarapp.fragments.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.adiblarapp.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.example.adiblarapp.fragments.PagerFragment"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_pager" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.adiblarapp.fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.adiblarapp.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_writerFragment"
+            app:destination="@id/writerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/writerFragment"
+        android:name="com.example.adiblarapp.fragments.WriterFragment"
+        android:label="fragment_writer"
+        tools:layout="@layout/fragment_writer" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.adiblarapp.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_writerFragment"
+            app:destination="@id/writerFragment" />
+    </fragment>
+</navigation>
